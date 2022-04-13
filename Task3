@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class Task3 {
+    public static void main(String[] args) {
+        System.out.println("Введите целое число, равное длине массива");
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] array = new int[n];
+        if (n == 1)
+        {
+            System.out.println("Введите " + n + " целое число");
+        }
+        else if (n==2 || n==3 || n==4)
+        {
+            System.out.println("Введите " + n + " целых числа (Enter - разделитель чисел)");
+        }
+        else
+        {
+            System.out.println("Введите " + n + " целых чисел (Enter - разделитель чисел)");
+        }
+
+        for (int i = 0; i < array.length; i++)
+        {
+            array[i] = sc.nextInt();
+        }
+
+        System.out.println("Элементы массива, кратные 3:");
+        for (int i = 0; i < array.length; i++) {
+            if (array[i]%3==0) {
+                System.out.println(array[i]);
+            }
+        }
+    }
+}
